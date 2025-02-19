@@ -11,7 +11,16 @@
 #include <string>    // std::string, std::getline
 #include <vector>    // std::vector
 
+std::cout << "\n""
+
 int main()
 {
+
+std::cout << "Enter a total of 3 songs\n";
+
+std:: cout << "Enter the title of your song?\n";
+
+std::vector<int> names
+
   return 0;
 }
