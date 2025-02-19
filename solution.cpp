@@ -11,16 +11,58 @@
 #include <string>    // std::string, std::getline
 #include <vector>    // std::vector
 
-std::cout << "\n""
+
 
 int main()
 {
+  vector<string> titles;
+  vector<string> artists;
+  vector<int> durations;
 
-std::cout << "Enter a total of 3 songs\n";
+  std:: string title;
+  std:: string artist;
+  std:: string response;
+  int duration;
 
-std:: cout << "Enter the title of your song?\n";
+  while (true) 
+  {
 
-std::vector<int> names
+      cout << "\nEnter your song's title ";
+      getline (cin, title);
+      titles.push_back(title);
 
-  return 0;
-}
+      cout << "Enter the artist's name ";
+      getline(cin, artist);
+      artists.push_back(artist);
+      
+      cout << "Enter the duration of your song (in seconds) ";
+      cin >> duration
+      cin.ignore();
+      durations.push_back(duration);
+
+      
+          }
+
+      
+      }
+      
+  }
+
+
+  std::vector<std::string> song_name = {};
+  std::vector<std::string> song_artist = {};
+  std::vector<int:: song_duration {};
+  std::string (yes_no != "n")
+  {
+    std::cout << Enter a song name, artist name and duration (in secs)\n";
+    std::string name;
+    std::stirng artist;
+    int duration;
+    
+    std::cin >> name >> artist >> duration;
+    
+    std::cout << "would you like to enter a new song (y/n)?\n;
+    std::cin >> yes_no;
+  }
+  
+  
