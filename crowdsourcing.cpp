@@ -11,6 +11,9 @@
 #include <string>    // std::string, std::getline
 #include <vector>    // std::vector
 
+
+void printLognestSongInfo(std::vector<std::string> names,
+                          std::vector<std::string> artists)
 int main() 
 {
 
