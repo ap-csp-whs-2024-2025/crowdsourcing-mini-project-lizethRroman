@@ -1,3 +1,5 @@
+bfmkb[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/oOSTMjjq)
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=18274893)
 # crowdsourcing-mini-project
 
 ## To compile code
@@ -54,10 +56,10 @@ Would you like to enter another song (y/n)?
 y
 
 Enter the song's title
-Summer Love
+b,  /Summer Love
 Enter the artist
 The Sunsets
-Enter the duration (in seconds)
+<!-- Enter  bthe duration (in seconds) -->
 187
 Would you like to enter another song (y/n)?
 y
