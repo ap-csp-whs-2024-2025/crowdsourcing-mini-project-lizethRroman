@@ -11,18 +11,51 @@
 #include <string>    // std::string, std::getline
 #include <vector>    // std::vector
 
+int totalDuration(std::vector<int> list)
+{
+  int index = 0;
+  int total = 0;
+  while(index < length(list))
+  {
+    total = total + list[index];
+    index = index + 1;
+  }
+  return total;
+}
 
-void printLognestSongInfo(std::vector<std::string> names,
-                          std::vector<std::string> artists)
+double averageDuration(std::vector<int> list)
+{
+  return(double) totalDuration(list) / length(list);
+}
+
+void printLongestDurationInfo(std::vector<std::string> names, std::vector<std::string> artists, std::vector<int> durations)
+{
+  int indexOfMax = 0;
+  int maxDuration = durations[0];
+  int curr_index = 0;
+
+  while(curr_index < length(names))
+  {
+    if(durations[curr_index] > maxDuration)
+    {
+      indexOfMax = curr_index;
+      maxDuration = durations[curr_index];
+    }
+    curr_index = curr_index + 1;
+  }
+
+  std::cout << "longest song: " << names[indexOfMax] << " by " << artists[indexOfMax] << " (" << durations[indexOfMax] << " seconds)\n";
+}
+
 int main() 
 {
 
     std::vector<std::string> song_names = {};
     std::vector<std::string> song_artists = {};
     std::vector<int> song_durations = {};
-    std::string yes_no = "y";
+    std::string choice = "y";
   
-    while(yes_no != "n") 
+    while (choice != "n") 
     {
       std::cout << "Enter a song name, artist name and duration (in secs)\n";
   
@@ -41,24 +74,24 @@ int main()
         
         std::cout << "Enter the duration of your song (in seconds) ";
         std::cin >> duration;
-        std::cin.ignore();
         song_durations.push_back(duration); 
   
         std::cout << "would you like to enter a new song (y/n)?\n";
-        std::cin >> yes_no;
+        
         std::cin.ignore();
+        std::getLine(std::cin, choice);
+        
+    }
 
-        std::cout << "\nSongs Entered:\n";
-    for (size_t i = 0; i < song_names.size(); ++i) 
-    {
-        std::cout << "Title: " << song_names[i] 
-                  << ", Artist: " << song_artists[i] 
-                  << ", Duration: " << song_durations[i] << " secs\n";
+       std::cout << "total duration: " << totalDuration(song_durations)
+              << "\nAverage duration; " << averageDuration(song_durations) << std::endl;
+          printLongestDurationInfo(song_names, song_artists, song_durations);
+          
   
-    }
+  
      return 0; 
-    }
-}
+  }
+
     
     
 
